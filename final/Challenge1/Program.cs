@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Ingrese su nombre:");
             string nombre = Console.ReadLine();
             Console.WriteLine($"¡Hola, {nombre}! Por favor, elige un ejercicio del siguiente menú: ");
