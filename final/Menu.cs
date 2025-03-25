@@ -1,4 +1,4 @@
-﻿namespace itm.csharp.basic
+﻿/* namespace itm.csharp.basic
 {
     public static class Menu
     {
@@ -24,4 +24,16 @@
 
         }
     }
-}
+} */
+
+ public static class Menu
+    {
+        public static void MostrarMenu()
+        {
+            Console.WriteLine("1. Determinar si un número es positivo, negativo o cero.");
+            Console.WriteLine("2. Operaciones básicas entre dos números.");
+            Console.WriteLine("3. Calcular el cuadrado de un número.");
+            Console.WriteLine("4-15. (Ejercicios aún no implementados)");
+            Console.WriteLine("Ingrese el número del ejercicio que desea ejecutar o 'q' para salir:");
+        }
+    }
