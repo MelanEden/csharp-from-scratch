@@ -40,7 +40,7 @@
 namespace itm.csharp.basic
 {
     class Program
-    {
+    
         static void Main(string[] args)
         {
             Console.WriteLine("Ingrese su nombre:");
