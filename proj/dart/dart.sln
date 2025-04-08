@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dart", "dart\dart.csproj", "{B606596F-8AD9-3F41-B0EC-8CF013E11E23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B606596F-8AD9-3F41-B0EC-8CF013E11E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B606596F-8AD9-3F41-B0EC-8CF013E11E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B606596F-8AD9-3F41-B0EC-8CF013E11E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B606596F-8AD9-3F41-B0EC-8CF013E11E23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0B08D7F-4262-400C-ACF0-AE0267066E57}
+	EndGlobalSection
+EndGlobal
