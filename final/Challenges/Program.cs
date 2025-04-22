@@ -6,7 +6,7 @@ namespace itm.csharp.basic
         {
             Console.WriteLine("Ingrese su nombre:");
             string nombre = Console.ReadLine();
-            Console.WriteLine($"¡Hola, {nombre}! Por favor, elige un ejercicio del siguiente menú:");
+            Console.WriteLine($"¡Hola,{nombre}! Por favor, elige un ejercicio del siguiente menú:");
             Menu.MostrarMenu();
 
             while (true)

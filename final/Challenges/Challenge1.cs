@@ -39,7 +39,7 @@
 
     public class Challenge4
     {
-        public void run()
+        public void Run()
         {
             Console.WriteLine("Ingrese el radio del circulo:");
             double radio = double.Parse(Console.ReadLine());
@@ -67,7 +67,7 @@
                 case 5: Console.WriteLine("Viernes"); break;
                 case 6: Console.WriteLine("Sabado"); break;
                 case 7: Console.WriteLine("Domingo"); break;
-                default Console.WriteLine("Número no válido"); break;
+                default: Console.WriteLine("Número no válido"); break;
             }
         }
     }
@@ -121,7 +121,7 @@
         public void Run()
         {
             int suma = 0;
-            for (int i = 1; i <= 50; i += 2)
+            for (int i = 2; i <= 50; i += 2)
             {
                 suma += i;
             }
@@ -172,7 +172,7 @@
         {
             if (denominador == 0)
             {
-                throw new ArgumentException("El denominador no puede ser cero.")
+                throw new ArgumentException("El denominador no puede ser cero.");
             }
 
             Numerador = numerador;
@@ -188,7 +188,7 @@
 
         public override string ToString()
         {
-            return $"{Numerador} / {Denominador}"
+            return $"{Numerador} / {Denominador}";
         }
     }
 
@@ -199,7 +199,7 @@
         public void Run()
         {
             Console.WriteLine("Introduce una palabra:");
-            string palabra = Console.ReadLine;
+            string palabra = Console.ReadLine();
             string invertida = new string(palabra.Reverse().ToArray());
             Console.WriteLine($"La palabra invertida es: {invertida}");
         }
@@ -295,7 +295,7 @@
         public void Run()
         {
             Console.WriteLine("Introduce un número:");
-            int numero = int.Parse(Console.Readline());
+            int numero = int.Parse(Console.ReadLine());
 
             if (numero >= 10 && numero <= 20)
             {
