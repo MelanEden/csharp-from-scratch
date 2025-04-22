@@ -1,6 +1,6 @@
-﻿
-namespace itm.csharp.basic
+﻿namespace itm.csharp.basic
 {
+    // Debe haber una clase que contenga el código
     class Program
     {
         static void Main(string[] args)
@@ -15,14 +15,11 @@ namespace itm.csharp.basic
                 string entrada = Console.ReadLine().ToLower();
                 if (entrada == "q" || entrada == "exit")
                 {
-                    break; // Sale del bucle   
+                    break; // Sale del bucle
                 }
 
                 if (int.TryParse(entrada, out int eleccion) && eleccion >= 1 && eleccion <= 15)
                 {
-                    // Llama al ejercicio correspondiente según la elección
-                    RunChallenge(eleccion);
-
                     Console.WriteLine("Presiona una tecla para continuar...");
                     Console.ReadKey();
                     Console.Clear();
@@ -33,9 +30,7 @@ namespace itm.csharp.basic
                     Console.WriteLine("Opción no valida. Por favor, ingrese un número entre 1 y 15, o 'q' o 'exit' para salir");
                 }
             }
-
             Console.WriteLine("¡Hasta Luego!");
         }
-
     }
-}       
+}
