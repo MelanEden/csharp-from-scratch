@@ -2,7 +2,7 @@
 {
     public static class Menu
     {
-        public static void MostrarMenu()
+        public void MostrarMenu()
         {
 
             Console.WriteLine("1. Determinar si un número es positivo, negativo o cero. ");
