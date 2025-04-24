@@ -1,20 +1,24 @@
 ﻿namespace itm.csharp.basic
 {
+
+/*Solicita al usuario un número y eleva este número al cuadrado
+solo si es positivo.*/
     public class Challenge1
     {
         public void Run()
         {
             Console.WriteLine("Ingrese un número:");
-            int numero = int.Parse(Console.ReadLine());
+            int num = int.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese la potencia a la elevará el número:");
             int potencia = int.Parse(Console.ReadLine());
-            double resultado = Math.Pow(numero, potencia);
+            double resultado = Math.Pow(num, potencia);
 
-            Console.Write($"{numero} elevado a la potencia {potencia} es: {resultado}");
+            Console.Write($"{num} elevado a la potencia {potencia} es: {resultado}");
         }
     }
 
-
+/*Solicita al usuario dos números. Si el primero es mayor, devuelva 
+su doble, de lo contrario devuelva el triple del segundo.*/
     public class Challenge2
     {
         public void Run()
