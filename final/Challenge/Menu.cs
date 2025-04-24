@@ -2,7 +2,7 @@
 {
     public static class Menu
     {
-        public void MostrarMenu()
+        public static void MostrarMenu()
         {
 
             Console.WriteLine("1. Determinar si un número es positivo, negativo o cero. ");
@@ -20,7 +20,7 @@
             Console.WriteLine("13. Categorizar por edad. ");
             Console.WriteLine("14. Agregar contactos a una agenda. ");
             Console.WriteLine("15. Operaciones Bancarias. ");
-            Console.WriteLine("INgrese el número del ejercicio que desea ejecutar ");
+            Console.WriteLine("Ingrese el número del ejercicio que desea ejecutar ");
 
         }
     }

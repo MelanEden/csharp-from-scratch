@@ -5,12 +5,15 @@
         public void Run()
         {
             Console.WriteLine("Ingrese un número:");
-            int num = int.Parse(Console.ReadLine());
-            if (num > 0) Console.WriteLine("Positivo");
-            else if (num < 0) Console.WriteLine("Negativo");
-            else Console.WriteLine("Es cero");
+            int numero = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese la potencia a la elevará el número:");
+            int potencia = int.Parse(Console.ReadLine());
+            double resultado = Math.Pow(numero, potencia);
+
+            Console.Write($"{numero} elevado a la potencia {potencia} es: {resultado}");
         }
     }
+
 
     public class Challenge2
     {
@@ -20,8 +23,17 @@
             double num1 = double.Parse(Console.ReadLine());
             Console.WriteLine("Ingrese segundo número:");
             double num2 = double.Parse(Console.ReadLine());
-            Console.WriteLine($"Suma: {num1 + num2}\nResta: {num1 - num2}\nMultiplicación: {num1 * num2}\nDivisión:{num1 / num2} ");
+            double result = 0;
 
+            if (num1 >= num2)
+            {
+                result = num1 * 2;
+            }
+            else
+            {
+                result = num2 * 3;
+            }
+            Console.WriteLine($"El resultado es: {result}");
         }
     }
 
@@ -41,10 +53,12 @@
     {
         public void Run()
         {
+            float radio = 0.0F;
+            float perimetro = 0.0F;
             Console.WriteLine("Ingrese el radio del circulo:");
-            double radio = double.Parse(Console.ReadLine());
-            double area = Math.PI * radio * radio;
-            Console.WriteLine($"El área del círculo con radio {radio} es: {area}");
+            radio = float.Parse(Console.ReadLine());
+            perimetro = (float)(Math.PI * 2 * radio);
+            Console.WriteLine($"El perimetro del círculo con radio {radio:F2} es: {perimetro:F2}");
         }
     }
 
@@ -82,7 +96,7 @@
         {
             Console.WriteLine("Ingrese su salario mensual:");
             double salario = double.Parse(Console.ReadLine());
-            double impuesto = salario > 1000 ? 0.1 * salario : 0;
+            double impuesto = salario > 12000 ? 0.15 * (salario - 12000) : 0;
             Console.WriteLine($"El impuesto a pagar es: {impuesto}");
 
         }
@@ -100,7 +114,8 @@
                 double n = double.Parse(Console.ReadLine());
                 Console.WriteLine("Divisor:");
                 double divisor = double.Parse(Console.ReadLine());
-                Console.WriteLine($"Resultado: {n / divisor}");
+                double Remainder(double n, double divisor) => n % divisor;
+                Console.WriteLine($"El residuo de {n} % {divisor} es: {Remainder(n, divisor)}");
 
             }
             catch (DivideByZeroException)
@@ -152,7 +167,7 @@
 
                 Fraccion resultado = fraccion1.Sumar(fraccion2);
 
-                Console.WriteLine($"La suma de {fraccion1} y {fraccion2} es: {resultado}");
+                Console.WriteLine($"La resta de {fraccion1} y {fraccion2} es: {resultado}");
 
             }
             catch (Exception e)
@@ -181,7 +196,7 @@
 
         public Fraccion Sumar(Fraccion otra)
         {
-            int nuevoNumerador = Numerador * otra.Denominador + otra.Numerador * Denominador;
+            int nuevoNumerador = Numerador * otra.Denominador - otra.Numerador * Denominador;
             int nuevoDenominador = Denominador * otra.Denominador;
             return new Fraccion(nuevoNumerador, nuevoDenominador);
         }
@@ -200,8 +215,8 @@
         {
             Console.WriteLine("Introduce una palabra:");
             string palabra = Console.ReadLine();
-            string invertida = new string(palabra.Reverse().ToArray());
-            Console.WriteLine($"La palabra invertida es: {invertida}");
+            int longitud = palabra.Length;
+            Console.WriteLine($"La palabra invertida es: {longitud}");
         }
     }
 
@@ -238,7 +253,7 @@
 
             for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine($"INtroducce el numero {i + 1}:");
+                Console.WriteLine($"Introducce el numero {i + 1}:");
                 numeros.Add(int.Parse(Console.ReadLine()));
             }
 
@@ -253,18 +268,22 @@
         public void Run()
         {
             Console.WriteLine("Introduce una palabra:");
-            string palabra = Console.ReadLine();
+            string palabra = Console.ReadLine().ToLower();
+            int contarVocales = 0;
 
-            if (palabra == new string(palabra.Reverse().ToArray()))
+            foreach (char letra in palabra)
             {
-                Console.WriteLine($"La palabra {palabra} es un palidromo.");
+
+                if ("aeiou".Contains(letra))
+                {
+                    contarVocales++;
+                }
             }
-            else
-            {
-                Console.WriteLine($"La palabra {palabra} no es un palidromo.");
-            }
+            Console.WriteLine("El número de vocales es: " + contarVocales);
+            Console.ReadLine();
         }
     }
+
 
     /*Pide un número al usuario y devuelve el factorial de ese número.*/
 
@@ -282,7 +301,7 @@
                 resultado *= i;
             }
 
-            Console.WriteLine($"El factorial de {fac} Is : {resultado}");
+            Console.WriteLine($"El factorial de {fac} es : {resultado}");
 
             Console.ReadKey();
         }
